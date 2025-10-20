@@ -68,22 +68,22 @@ The system runs through several **modes** (Idle, Celebration, Drunk, Fancy), aut
 - Audio: Plays tracks **1–8** in sequence
 
 ### 💃 Celebration Mode
-- OLED: “Human activity detection”
-- Plays **audio 9–10**, then waits for shaking detected by MPU6500
-- If shaking is detected ( Δ acceleration > threshold): OLED → “Body activity detected” + play **audio 12–14** + LED blue pulse during waiting, multicolor when detected 
-- If not detected after 3 loops: still proceeds to **audio 12–14**
+- OLED: “Human Activity Detection”
+- Plays **audio 9–10**, then waits for shaking detected by MPU6500, LED blue pulse during waiting
+- If shaking is detected ( Δ acceleration > threshold): OLED → “Body activity detected” + play **audio 13+14** + LED turns green
+- If not detected after the audio 11 is time out: “Body activity not detected" + play **audio 13+15** + LED turns red
 
 ### 🍷 Drunk Mode
 - OLED: “Alcohol detection”
-- Plays **audio 15–16**
+- Plays **audio 16–17**, LED rolling orange/yellow
 - While MQ3 senses ethanol (avgValue > calibrated threshold), display and LED react:
-  - Detected → “Alcohol detected” + play **audio 18–22** + LED rolling orange/yellow → Red when detected
-  - Not detected → replay **audio 17** up to 3 times, then continue
+  - Detected → “Alcohol detected” + play **audio 20+21** + LED red when detected
+  - Not detected → “Alcohol not detected” + play **audio 20+22** + LED red when detected
 
 ### 🎉 Fancy Mode
 - OLED: “Time to Party!”
 - LED: Full RGB animation (rainbow/flicker)
-- Audio: Plays **tracks 23–25**
+- Audio: Plays **tracks 24–26**
 
 ## ⚙️ Troubleshooting & Practical Notes
 
