@@ -33,7 +33,7 @@ The system runs through several **modes** (Idle, Celebration, Drunk, Fancy), aut
 
 ---
 
-## 🔌 Pin Connections
+## [📄 Wiring Connection (PDF)](Wiring.pdf)
 
 | Component | Pin | Arduino Pin |
 |------------|-----|--------------|
@@ -58,7 +58,6 @@ The system runs through several **modes** (Idle, Celebration, Drunk, Fancy), aut
 | | VCC → | +5V |
 | | GND → | GND |
 
-[📄 Wiring Connection (PDF)](Wiring.pdf)
 ---
 
 ## 🎭 Software Modes
