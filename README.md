@@ -1,4 +1,4 @@
-# 🎓 PhD Hat Project
+# 🎓 PhD Hat Project 
 An interactive, sensor-driven celebration hat designed for the PhD defense of our friend Patrick Langer!
 
 For a truly entertaining graduation moment, the hat reacts to **movement**, **alcohol detection**, — creating a fun and responsive experience, a sequence of light patterns, OLED messages, and audio playback.
@@ -146,8 +146,3 @@ If sketch doesn’t upload to the Arduino Nano (or similar board), try:
 | YouTube Downloader | Y2Mate | [https://www-y2mate.com/convert/](https://www-y2mate.com/convert/) |
 | MP3 Cutter / Editor | MP3Cut Online | [https://mp3cut.net/de/](https://mp3cut.net/de/) |
 
----
-
-## 👨‍🔬 Author
-**Fan Wu**  
-**Kevin Riehl**  
