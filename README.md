@@ -104,37 +104,27 @@ If sketch doesn’t upload to the Arduino Nano (or similar board), try:
    - Disconnect any external **power supply**.  
    - Briefly **short VCC and GND** to reset.  
 
-4. **Disconnect DFPlayer RX/TX During Upload**  
-   - The DFPlayer uses Serial and may block communication with the IDE.  
-   - Unplug RX/TX wires before uploading, reconnect afterward.
+4. **Disconnect RX/TX During Upload**  
+   - Serial may block communication with the IDE. Unplug RX/TX wires before uploading, reconnect afterward.
 
 ---
 
 ### 🎵 DFPlayer Mini Usage Notes
 1. **SD Card Compatibility**  
    - Works only with **≤ 32GB microSD** cards.  
-   - **SanDisk** is known to work well.  
-   - **Intenso** and other brands may fail to initialize.
+   - Brand matters. **SanDisk** works well. **Intenso** fails to initialize.
 
-2. **File System & Copying**  
+2. **File System & Copying**
+   - Avoid **macOS** (creates hidden `.DS_Store` files) to copy files. → Use **Windows** or **Linux** 
    - SD card must have **at least one MP3 file**.  
-   - Avoid **macOS Finder** (creates hidden `.DS_Store` files).  
-     → Use **Windows** or **Linux** to copy files.
-
-3. **Wiring Reminder**  
-   - **RX (Arduino)** → **TX (DFPlayer)**  
-   - **TX (Arduino)** → **RX (DFPlayer)**  
-   - **VCC → 5V**, **GND → GND**
-
-4. **Updating or Renaming Audio Files**  
    - Name MP3 / WAV files exactly as: `0001.mp3`, `0002.mp3`, `0003.mp3`, … up to `0025.mp3`, and stored in the DFPlayer’s SD card root directory.
-   - Always **format the SD card** if you needs to update or rename the audios.  
-   - ⚠️ The DFPlayer plays files in the **order they were written**, not by name. The safest way to copy files is **in exact order**, ONE by ONE.  
-   - DO NOT use MacOS to copy files, can fail due to hidden files / folders, use Linux or MacOS.
+   - If you needs to update or rename the audios, need to **reformat the SD card**. As the DFPlayer plays files in the **order they were written**, not by name. After renaming, need to copy files in exact order, **ONE by ONE**.  
 
+4. **Wiring Reminder**  
+   - Software Serial could work, but need to take care **RX (Arduino)** → **TX (DFPlayer)**, **TX (Arduino)** → **RX (DFPlayer)**  
+     
 5. **Volume and Power**  
    - High volume (>20) can distort or stop playback.  
-   - Safe range: **10–20**.
 
 ---
 
